@@ -10,6 +10,34 @@ Não produza apenas um template genérico preenchido com textos. O resultado dev
 
 ---
 
+## 1.1. Leitura obrigatória dos materiais
+
+Antes de escrever código ou definir a direção visual do site, analise todos os materiais disponíveis do cliente.
+
+Verifique obrigatoriamente:
+
+- `public/docs/` — briefing, perfil da empresa, apresentações, PDFs e demais documentos
+- `public/brand/` — logos, favicon, manual de identidade visual, paleta e elementos da marca
+- `public/images/` — fotografias e demais imagens fornecidas pelo cliente
+
+Use os materiais reais como fonte principal para:
+
+- conteúdo
+- serviços
+- diferenciais
+- informações de contato
+- localização
+- identidade visual
+- cores
+- imagens
+- tom de comunicação
+
+Não invente informações factuais sobre a empresa quando elas não estiverem nos materiais.
+
+Quando alguma informação necessária não estiver disponível, utilize apenas conteúdo genérico ou estrutural que não crie alegações falsas sobre a empresa.
+
+A estrutura existente do starter é uma base técnica, não uma limitação visual. Adapte layout, composição, seções e componentes conforme os materiais e a identidade de cada cliente.
+
 ## 2. Stack obrigatória
 
 O projeto utiliza:
