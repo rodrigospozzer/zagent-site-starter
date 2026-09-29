@@ -86,7 +86,7 @@ O Next.js prioriza a hierarquia da pasta `app`.
 
 Caso exista um favicon padrão em:
 
-`src/app/favicon.ico`
+`app/favicon.ico`
 
 ele deve ser removido para evitar conflito com o favicon fornecido.
 
