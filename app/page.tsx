@@ -1,69 +1,146 @@
-import Image from "next/image";
+import { siteConfig } from "@/data/site.config";
+import { content } from "@/data/content";
+import { brand } from "@/data/brand";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main
+      style={{
+        backgroundColor: brand.colors.background,
+        color: brand.colors.text,
+      }}
+      className="min-h-screen"
+    >
+      <header className="border-b border-black/10">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+          <div className="font-semibold tracking-tight">
+            {siteConfig.name}
+          </div>
+
+          <a
+            href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+            className="rounded-full px-5 py-3 text-sm font-medium text-white"
+            style={{ backgroundColor: brand.colors.primary }}
+          >
+            {content.hero.cta}
+          </a>
+        </div>
+      </header>
+
+      <section
+        className="flex min-h-[80vh] items-center"
+        style={{
+          backgroundColor: brand.colors.surface,
+        }}
+      >
+        <div className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8">
+          <div className="max-w-4xl">
+            <p
+              className="mb-6 text-sm font-medium uppercase tracking-[0.2em]"
+              style={{ color: brand.colors.accent }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              {brand.style}
+            </p>
+
+            <h1
+              className="text-5xl font-semibold leading-tight tracking-tight md:text-6xl lg:text-7xl"
+              style={{ fontFamily: brand.typography.heading }}
             >
-              Learning
-            </a>{" "}
-            center.
+              {content.hero.title}
+            </h1>
+
+            <p
+              className="mt-8 max-w-2xl text-lg leading-8"
+              style={{ color: brand.colors.muted }}
+            >
+              {content.hero.subtitle}
+            </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+                className="rounded-full px-6 py-3 text-sm font-medium text-white"
+                style={{
+                  backgroundColor: brand.colors.primary,
+                  borderRadius: brand.radius.medium,
+                }}
+              >
+                {content.hero.cta}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+        <div className="max-w-3xl">
+          <h2
+            className="text-3xl font-semibold tracking-tight md:text-4xl"
+            style={{ fontFamily: brand.typography.heading }}
+          >
+            {content.about.title}
+          </h2>
+
+          <p
+            className="mt-6 text-lg leading-8"
+            style={{ color: brand.colors.muted }}
+          >
+            {content.about.text}
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      <section
+        className="mx-auto max-w-7xl px-6 py-20 lg:px-8"
+        style={{ backgroundColor: brand.colors.surface }}
+      >
+        <div className="mb-12">
+          <h2
+            className="text-3xl font-semibold tracking-tight md:text-4xl"
+            style={{ fontFamily: brand.typography.heading }}
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Nossos serviços
+          </h2>
         </div>
-      </main>
-    </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          {content.services.map((service) => (
+            <article
+              key={service.title}
+              className="flex h-full flex-col p-6"
+              style={{
+                backgroundColor: brand.colors.background,
+                borderRadius: brand.radius.large,
+                boxShadow:
+                  brand.visual.shadowStyle === "soft"
+                    ? "0 10px 30px rgba(0,0,0,0.06)"
+                    : "none",
+              }}
+            >
+              <h3 className="text-xl font-semibold">{service.title}</h3>
+
+              <p
+                className="mt-4 leading-7"
+                style={{ color: brand.colors.muted }}
+              >
+                {service.description}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <footer className="border-t border-black/10">
+        <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+          <p className="text-sm" style={{ color: brand.colors.muted }}>
+            {content.footer.description}
+          </p>
+
+          <p className="mt-2 text-sm" style={{ color: brand.colors.muted }}>
+            {siteConfig.location.city} — {siteConfig.location.state}
+          </p>
+        </div>
+      </footer>
+    </main>
   );
 }
