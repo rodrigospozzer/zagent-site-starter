@@ -4,41 +4,67 @@
 
 Aja como um Engenheiro Frontend Sênior especializado em sites institucionais e landing pages premium.
 
-Seu objetivo é transformar os materiais fornecidos pelo cliente em um site profissional, responsivo, rápido, coerente com a identidade da marca e pronto para publicação.
+Seu objetivo é transformar os materiais fornecidos pelo cliente em um site profissional, responsivo, rápido, visualmente coerente com a identidade da marca e pronto para publicação.
 
-Não produza apenas um template genérico preenchido com textos. O resultado deve parecer desenvolvido especificamente para a empresa.
+O resultado deve parecer desenvolvido especificamente para a empresa, e não apenas um template genérico preenchido com textos.
 
 ---
 
-## 1.1. Leitura obrigatória dos materiais
+## 2. Regra principal
 
-Antes de escrever código ou definir a direção visual do site, analise todos os materiais disponíveis do cliente.
+Antes de desenvolver qualquer página:
 
-Verifique obrigatoriamente:
+1. Leia este arquivo `AGENTS.md`.
+2. Analise `public/docs/briefing.md`.
+3. Analise todos os materiais existentes em `public/brand`.
+4. Analise todas as imagens existentes em `public/images`.
+5. Analise os demais arquivos relevantes existentes em `public`.
+6. Consulte os arquivos de configuração existentes em `data`.
 
-- `public/docs/` — briefing, perfil da empresa, apresentações, PDFs e demais documentos
-- `public/brand/` — logos, favicon, manual de identidade visual, paleta e elementos da marca
-- `public/images/` — fotografias e demais imagens fornecidas pelo cliente
+Os materiais fornecidos pelo cliente são a principal fonte de verdade sobre empresa, serviços, público, posicionamento, identidade visual, contatos, localização, diferenciais e tom de comunicação.
 
-Use os materiais reais como fonte principal para:
+Não ignore materiais fornecidos pelo cliente.
 
-- conteúdo
-- serviços
-- diferenciais
-- informações de contato
-- localização
-- identidade visual
-- cores
-- imagens
-- tom de comunicação
+---
 
-Não invente informações factuais sobre a empresa quando elas não estiverem nos materiais.
+## 3. Estrutura completa por padrão
 
-Quando alguma informação necessária não estiver disponível, utilize apenas conteúdo genérico ou estrutural que não crie alegações falsas sobre a empresa.
+Sempre desenvolva uma landing page completa.
 
-A estrutura existente do starter é uma base técnica, não uma limitação visual. Adapte layout, composição, seções e componentes conforme os materiais e a identidade de cada cliente.
+Mesmo que o briefing não contenha informações suficientes para todas as seções, mantenha a estrutura completa e produza conteúdo provisório coerente com o nicho.
 
-## 2. Stack obrigatória
+A estrutura padrão deve considerar:
+
+1. Header
+2. Hero
+3. Sobre
+4. Serviços
+5. Diferenciais
+6. Processo / Como funciona
+7. Prova social / Depoimentos
+8. Localização
+9. FAQ
+10. CTA final
+11. Footer
+12. Elementos globais de conversão
+
+Não remova uma seção simplesmente porque determinada informação não foi fornecida. A remoção poderá ser realizada posteriormente após validação com o cliente.
+
+### Conteúdo provisório
+
+É permitido criar títulos, subtítulos, textos institucionais, descrições de serviços, diferenciais, perguntas e respostas de FAQ, textos de CTA, textos auxiliares e conteúdo comercial coerente com o nicho.
+
+Quando for necessário criar conteúdo provisório, mantenha-o plausível e compatível com o posicionamento da empresa.
+
+Não apresente como fato informações específicas que não foram fornecidas, como número de clientes, anos de experiência, prêmios, certificações, avaliações reais, resultados numéricos, CNPJ, endereço inexistente, telefone inexistente ou dados pessoais.
+
+Quando necessário, utilize placeholders evidentes para posterior revisão.
+
+Depoimentos não fornecidos pelo cliente podem ser criados apenas como placeholders claramente identificáveis para substituição antes da publicação.
+
+---
+
+## 4. Stack obrigatória
 
 O projeto utiliza:
 
@@ -50,558 +76,450 @@ O projeto utiliza:
 - Radix UI
 - lucide-react
 
-Preserve essa stack.
-
-Não substitua tecnologias nem adicione dependências desnecessárias.
+Priorize os componentes e dependências já existentes no projeto. Não adicione bibliotecas desnecessárias.
 
 ---
 
-## 3. Antes de desenvolver
+## 5. Direção visual
 
-Antes de alterar a interface:
+O design deve ser baseado na identidade e no posicionamento do cliente.
 
-1. Examine a estrutura atual do projeto.
-2. Leia os materiais fornecidos pelo cliente.
-3. Examine os arquivos existentes em `public`.
-4. Examine especialmente:
-   - `public/brand`
-   - `public/images`
-   - `public/docs`
-5. Leia:
-   - `data/site.config.ts`
-   - `data/content.ts`
-   - `data/brand.ts`
-6. Identifique:
-   - nome da empresa
-   - segmento
-   - proposta de valor
-   - serviços
-   - diferenciais
-   - público
-   - localização
-   - contatos
-   - redes sociais
-   - identidade visual
-   - cores
-   - tipografia
-   - logo
-   - imagens disponíveis
-   - informações relevantes para SEO
+Analise logo, cores, tipografia, imagens, elementos gráficos, manual de identidade, referências visuais, segmento da empresa, público-alvo e tom da marca.
 
-Só depois planeje e implemente a página.
+Não force o estilo visual atual do starter no site final. O starter é apenas uma base técnica.
+
+Cada site deve possuir personalidade própria. Evite aparência genérica de template.
 
 ---
 
-## 4. Fonte da verdade
+## 6. Header e navegação
 
-Os materiais fornecidos pelo cliente são a principal fonte de verdade.
+Todo site completo deve possuir Header.
 
-Utilize informações existentes nos documentos, briefing, identidade visual e assets.
+Quando houver múltiplas seções na página, crie navegação ancorada.
 
-Não invente informações factuais sobre a empresa.
+Exemplos de links: Início, Sobre, Serviços, Diferenciais, Depoimentos, FAQ e Contato.
 
-Nunca invente:
+Cada item do menu deve apontar para um `id` real existente na página.
 
-- endereço
-- telefone
-- WhatsApp
-- e-mail
-- número de clientes
-- anos de experiência
-- certificações
-- prêmios
-- avaliações
-- depoimentos
-- garantias
-- preços
-- estatísticas
-- parceiros
-- unidades
-- redes sociais
+Exemplo: `href="#servicos"` deve apontar para `id="servicos"`.
 
-Quando uma informação não estiver disponível, adapte a seção ou omita o dado.
+O Header deve possuir CTA principal quando apropriado.
 
-É permitido criar textos de marketing, títulos, subtítulos, descrições e CTAs a partir das informações reais fornecidas, desde que não sejam criadas alegações factuais sem suporte.
+Quando o WhatsApp for o principal canal comercial, utilizar CTA para WhatsApp.
+
+Se o Header for `fixed` ou `sticky`, garantir que a navegação ancorada não esconda os títulos das seções.
 
 ---
 
-## 5. Arquivos de dados
+## 7. Menu mobile
 
-Sempre que apropriado, centralize informações reutilizáveis nos arquivos existentes.
+Todo site com navegação deve possuir menu mobile funcional.
 
-### `data/site.config.ts`
+O menu mobile deve:
 
-Utilize para informações gerais da empresa, como:
-
-- nome
-- domínio
-- descrição
-- contato
-- localização
-- redes sociais
-- configurações gerais de SEO
-
-### `data/content.ts`
-
-Utilize para conteúdo editorial da página, como:
-
-- Hero
-- Sobre
-- Serviços
-- Processo
-- Diferenciais
-- Prova social quando existir
-- FAQ
-- Localização
-- Footer
-
-A estrutura pode ser adaptada quando o projeto exigir.
-
-Não force seções que não façam sentido para o cliente.
-
-### `data/brand.ts`
-
-Utilize para decisões visuais reutilizáveis, como:
-
-- cores
-- estilo
-- tipografia
-- radius
-- superfícies
-- características visuais
-
-A interface final deve refletir a identidade real da empresa.
-
----
-
-## 6. Direção visual
-
-Não trate o starter como um layout visual obrigatório.
-
-O starter é uma base técnica.
-
-A composição final pode e deve ser redesenhada de acordo com:
-
-- identidade visual
-- segmento
-- posicionamento
-- conteúdo
-- quantidade de informação
-- assets disponíveis
-
-Evite aparência genérica de template.
-
-Crie hierarquia visual clara e identidade consistente.
-
-Evite uso excessivo de:
-
-- gradientes sem relação com a marca
-- glassmorphism
-- sombras exageradas
-- animações gratuitas
-- cards para todo tipo de conteúdo
-- elementos decorativos sem função
-
-Prefira uma direção visual coerente com a empresa.
-
----
-
-## 7. Hero / Primeira Dobra
-
-O conteúdo principal deve possuir espaço suficiente abaixo do header.
-
-Use padding superior generoso quando necessário.
-
-O Hero deve priorizar:
-
-- proposta de valor clara
-- hierarquia visual
-- boa distribuição de espaço
-- alinhamento consistente
-- CTA evidente
-- responsividade
-
-Quando fizer sentido, utilizar:
-
-`min-h-[80vh]`
-
-com centralização vertical.
-
-Não é obrigatório utilizar esse formato quando outra composição representar melhor a marca e o conteúdo.
-
----
-
-## 8. Estrutura da página
-
-Uma landing page institucional completa pode considerar:
-
-1. Header
-2. Hero
-3. Sobre
-4. Serviços
-5. Diferenciais
-6. Processo / Como funciona
-7. Prova social
-8. Localização
-9. FAQ
-10. Footer
-11. Interfaces globais
-
-Essa lista não é obrigatória.
-
-Adicione, remova, reorganize ou combine seções de acordo com os materiais e objetivos do cliente.
-
-Não crie seções vazias apenas para seguir a estrutura.
-
----
-
-## 9. Cards
-
-Quando utilizar grids de cards e houver necessidade de alturas consistentes, prefira:
-
-`items-stretch`
-
-Nos cards:
-
-`h-full flex flex-col`
-
-Para alinhar ações ou elementos inferiores:
-
-`mt-auto`
-
-Cards devem ser utilizados quando forem semanticamente e visualmente adequados, não como solução padrão para todas as seções.
-
----
-
-## 10. Espaçamento
-
-As seções devem possuir respiro visual adequado.
-
-Como referência:
-
-`py-16 md:py-24`
-
-Ajuste conforme a composição.
-
-Evite páginas comprimidas e também espaços vazios excessivos sem intenção visual.
-
----
-
-## 11. Menu mobile
-
-Quando houver menu mobile em overlay, utilizar uma implementação robusta.
-
-Quando apropriado:
-
-`fixed inset-0 z-[9999] w-screen h-screen`
-
-O menu deve:
-
+- possuir botão hamburger
 - abrir e fechar corretamente
-- possuir navegação acessível
+- conter os mesmos links principais do desktop
+- fechar após selecionar um link
 - funcionar em telas pequenas
-- não ficar atrás de outros elementos
+- permanecer acima de todo o conteúdo
 
-Não utilizar `overflow-hidden` permanentemente em `<main>` ou wrappers globais apenas para resolver problemas de layout.
+Quando utilizar overlay de tela inteira, usar como referência `fixed inset-0 z-[9999] w-screen h-screen`.
 
----
-
-## 12. Assets
-
-Priorize assets reais fornecidos pelo cliente.
-
-Verifique `public` antes de criar qualquer substituição.
-
-Pastas previstas:
-
-- `public/brand`
-- `public/images`
-- `public/docs`
-
-Quando existirem logo, favicon, fotografias ou elementos gráficos da empresa, utilize-os adequadamente.
-
-Não substitua assets oficiais por alternativas genéricas sem necessidade.
-
-Não presuma que um arquivo existe: confirme o caminho antes de referenciá-lo.
+Não utilizar `overflow-hidden` em `<main>` ou wrappers globais que possam cortar ou quebrar o menu.
 
 ---
 
-## 13. Logo e favicon
+## 8. Hero / Primeira dobra
 
-Utilize o logo fornecido pelo cliente quando disponível.
+O Hero deve comunicar rapidamente o que a empresa faz, para quem, o principal benefício e a próxima ação desejada.
 
-Para favicon, utilize o asset real disponível no projeto.
+Priorizar hierarquia visual clara, H1 forte, texto de apoio, CTA principal, CTA secundário quando fizer sentido e composição visual coerente com a marca.
 
-O Next.js prioriza arquivos especiais existentes dentro de `app`.
+Quando apropriado, utilizar `min-h-[80vh]` com centralização vertical.
 
-Caso exista:
+Quando houver Header fixo ou absoluto, garantir espaço superior suficiente. Como referência: `pt-32 pb-16 md:pt-40 md:pb-24`.
 
-`app/favicon.ico`
-
-e o projeto deva utilizar outro favicon, remova o favicon padrão para evitar conflito.
-
-Configure `metadata.icons` somente apontando para arquivos que realmente existam.
-
-Exemplo:
-
-```ts
-icons: {
-  icon: "/favicon.png",
-  shortcut: "/favicon.png",
-  apple: "/favicon.png",
-}
-```
-
-Adapte o caminho conforme os assets reais do projeto.
+Adaptar quando necessário de acordo com o design.
 
 ---
 
-## 14. SEO
+## 9. Seções e espaçamento
 
-Cada site deve possuir metadata coerente com a empresa.
+Todas as seções devem possuir respiro adequado. Como referência: `py-16 md:py-24`.
+
+Evitar seções espremidas, textos muito próximos, grids sem respiro e hierarquia visual fraca.
+
+O espaçamento deve parecer intencional e consistente.
+
+---
+
+## 10. Cards
+
+Quando utilizar grids de cards, priorizar alinhamento consistente.
+
+O container do grid deve utilizar, quando apropriado, `items-stretch`.
+
+Cada card deve utilizar `h-full flex flex-col`.
+
+Botões ou elementos de rodapé dentro dos cards devem utilizar `mt-auto`.
+
+Todos os cards de uma mesma seção devem manter coerência visual.
+
+---
+
+## 11. Sobre
+
+A seção Sobre deve transformar informações institucionais em uma apresentação clara e comercial.
+
+Não apenas copie o briefing literalmente.
+
+Organize o conteúdo para comunicar quem é a empresa, o que faz, filosofia ou posicionamento, diferenciais relevantes e relação com o cliente.
+
+---
+
+## 12. Serviços
+
+Criar uma seção clara para os principais serviços.
+
+Cada serviço deve possuir, quando apropriado, título, descrição, ícone ou elemento visual, benefício e CTA ou direcionamento.
+
+Não inventar serviços incompatíveis com o material fornecido.
+
+---
+
+## 13. Diferenciais
+
+Sempre considerar uma seção de diferenciais.
+
+Utilizar benefícios reais ou inferências comerciais razoáveis baseadas no negócio.
+
+Evitar afirmações específicas não comprovadas.
+
+---
+
+## 14. Processo / Como funciona
+
+Criar normalmente entre 3 e 4 etapas.
+
+O objetivo é mostrar de maneira simples como o cliente inicia, contrata, agenda ou utiliza o serviço.
+
+O processo deve ser adaptado ao tipo de negócio.
+
+---
+
+## 15. Prova social
+
+Criar seção de prova social/depoimentos.
+
+Quando existirem depoimentos fornecidos, utilizá-los sem alterar o sentido.
+
+Quando não houver depoimentos, manter a estrutura utilizando placeholders claramente identificáveis para posterior substituição.
+
+Não inventar avaliações verificadas, notas de plataformas ou números de clientes.
+
+---
+
+## 16. Localização
+
+Criar seção de localização.
+
+Quando houver endereço real, utilizá-lo.
+
+Quando houver informação suficiente, utilizar mapa incorporado quando adequado.
+
+Não inventar endereço.
+
+Caso o endereço ainda não tenha sido fornecido, manter a estrutura com placeholder evidente para revisão.
+
+---
+
+## 17. FAQ
+
+Todo site completo deve possuir seção FAQ com normalmente 4 a 5 perguntas relevantes.
+
+As perguntas devem ajudar a reduzir objeções reais do público e podem abordar funcionamento, atendimento, orçamento, agendamento, área atendida, prazos, serviços e formas de contato.
+
+Não inventar políticas comerciais específicas que não tenham sido fornecidas.
+
+Quando possível, utilizar Accordion do shadcn/ui/Radix UI.
+
+---
+
+## 18. CTA final
+
+Antes do Footer, criar uma chamada final para ação.
+
+Ela deve reforçar o benefício principal, o próximo passo e o principal canal de contato.
+
+Evitar terminar a página sem uma ação clara.
+
+---
+
+## 19. WhatsApp
+
+Quando existir número de WhatsApp nos materiais do cliente, criar links funcionais para `https://wa.me/NUMERO`.
+
+Utilizar apenas números, incluindo código do país e DDD.
+
+Quando apropriado, adicionar mensagem inicial contextual.
+
+### Botão flutuante
+
+Se houver WhatsApp, criar obrigatoriamente um botão flutuante de WhatsApp.
+
+O botão deve:
+
+- permanecer fixo na tela
+- possuir z-index alto
+- não bloquear conteúdo importante
+- funcionar no desktop
+- funcionar no mobile
+- utilizar o número real fornecido pelo cliente
+- possuir `aria-label` descritivo
+
+Não omitir o botão flutuante quando houver WhatsApp disponível.
+
+---
+
+## 20. Footer
+
+Todo site deve possuir Footer completo.
+
+Incluir quando disponíveis nome da empresa, descrição curta, telefone, WhatsApp, e-mail, endereço, redes sociais, navegação e copyright.
+
+Também deve existir obrigatoriamente o crédito da Z-Agent.
+
+Utilizar o texto `Desenvolvido por Z-Agent`.
+
+O texto `Z-Agent` deve ser um link clicável para `https://sites.z-agent.com.br`.
+
+O link deve abrir em nova aba utilizando `target="_blank"` e `rel="noopener noreferrer"`.
+
+Não remover nem alterar o destino desse crédito sem solicitação explícita.
+
+---
+
+## 21. Assets
+
+Priorizar assets fornecidos pelo cliente.
+
+Verificar especialmente `public/brand`, `public/images` e demais arquivos de `public`.
+
+Não substituir logo, identidade visual, imagens oficiais ou elementos gráficos por elementos genéricos sem necessidade.
+
+Não utilizar arquivos padrão do Next.js/Vercel como conteúdo visual do site final.
+
+Remover assets padrão não utilizados quando apropriado.
+
+---
+
+## 22. Imagens
+
+Utilizar imagens de maneira responsiva.
+
+Priorizar `next/image` quando apropriado.
+
+Garantir `alt` descritivo, proporções adequadas, boa qualidade, responsividade e carregamento eficiente.
+
+Quando utilizar `<img>` em vez de `next/image`, adicionar imediatamente antes da tag:
+
+`/* eslint-disable-next-line @next/next/no-img-element */`
+
+---
+
+## 23. Favicon
+
+Verificar se o cliente forneceu favicon.
+
+O Next.js prioriza arquivos dentro de `app`.
+
+Caso exista `app/favicon.ico` e o cliente tenha fornecido outro favicon, remover o favicon padrão para evitar conflito.
+
+Configurar metadata adequadamente.
+
+Exemplo em uma única linha:
+
+`icons: { icon: "/favicon.png", shortcut: "/favicon.png", apple: "/favicon.png" }`
+
+Nunca apontar para um asset inexistente.
+
+---
+
+## 24. SEO
+
+Todo site deve possuir metadata adequada.
 
 Configurar quando houver informações suficientes:
 
 - title
 - description
 - metadataBase
+- canonical
 - Open Graph
 - Twitter
-- icons
+- favicon
 
-O título e a descrição devem representar a empresa e seus serviços de forma natural.
+Utilizar informações reais do cliente.
 
-Evite keyword stuffing.
+O title e description devem ser coerentes com empresa, serviço, localização e intenção de busca.
 
-Não invente localização ou serviços apenas para SEO.
-
-Utilize headings com hierarquia semântica adequada.
-
-Normalmente deve existir apenas um `h1` principal.
+Não fazer keyword stuffing.
 
 ---
 
-## 15. Open Graph
+## 25. Open Graph e Twitter
 
-Configure Open Graph e Twitter utilizando informações reais do projeto.
+Configurar Open Graph e Twitter Cards.
 
-Imagens de compartilhamento devem apontar para assets existentes.
+As imagens utilizadas devem existir realmente no projeto.
 
-Nunca referencie uma imagem inexistente apenas para preencher metadata.
+Não criar referência para arquivos inexistentes.
 
-Se não houver imagem adequada, não invente um caminho falso.
-
----
-
-## 16. WhatsApp e contatos
-
-Quando houver CTA de WhatsApp, utilize o número real fornecido para o cliente.
-
-Prefira links no formato:
-
-`https://wa.me/NUMERO`
-
-utilizando somente os dígitos necessários no número.
-
-Quando apropriado, utilize uma mensagem inicial coerente com o contexto.
-
-Pode existir botão flutuante de WhatsApp quando fizer sentido para conversão.
-
-Garanta que ele não cubra conteúdo importante em telas pequenas.
-
-Nunca utilize números ou contatos fictícios na versão final.
+Quando não houver imagem específica de compartilhamento, utilizar o melhor asset disponível e adequado.
 
 ---
 
-## 17. Créditos da Z-Agent
+## 26. Responsividade
 
-O crédito da Z-Agent deve permanecer conforme definido pela configuração do projeto.
+O site deve funcionar corretamente em celulares pequenos, celulares grandes, tablets, notebooks e desktops.
 
-Não remover ou modificar o crédito ou seu link sem solicitação explícita.
+Validar especialmente Header, menu mobile, Hero, grids, imagens, botões, textos grandes, FAQ, Footer e botão flutuante.
 
----
-
-## 18. Responsividade
-
-Desenvolva mobile-first.
-
-Verifique especialmente:
-
-- 320px
-- 375px
-- 768px
-- desktop
-
-Evite:
-
-- overflow horizontal
-- textos cortados
-- botões fora da tela
-- cards quebrados
-- imagens deformadas
-- menus inacessíveis
-- elementos flutuantes cobrindo conteúdo
-
-O site deve funcionar bem tanto no celular quanto no desktop.
+Não considerar o site finalizado apenas porque funciona no desktop.
 
 ---
 
-## 19. Acessibilidade
+## 27. Acessibilidade
 
-Sempre que aplicável:
+Utilizar HTML semântico, contraste adequado, textos alternativos, labels quando necessários, `aria-label` em botões somente com ícone, estados de foco e navegação por teclado quando aplicável.
 
-- utilize HTML semântico
-- preserve contraste legível
-- forneça `alt` adequado para imagens relevantes
-- utilize labels ou `aria-label` em controles sem texto
-- mantenha foco de teclado perceptível
-- evite elementos clicáveis sem indicação de interação
-
-Elementos puramente decorativos não devem receber descrições enganosas.
+Não sacrificar legibilidade por estética.
 
 ---
 
-## 20. Imagens
+## 28. Performance
 
-Prefira `next/image` quando adequado.
+Evitar dependências desnecessárias, imagens excessivamente pesadas, JavaScript desnecessário, animações excessivas e componentes complexos sem necessidade.
 
-Quando houver motivo para utilizar `<img>`, trate corretamente as regras do projeto.
-
-Se necessário, utilize imediatamente antes da tag:
-
-```tsx
-{/* eslint-disable-next-line @next/next/no-img-element */}
-```
-
-Não distorça imagens.
-
-Preserve proporções e utilize `object-cover` ou `object-contain` conforme o contexto.
+Priorizar performance e estabilidade.
 
 ---
 
-## 21. Imports e código
+## 29. Animações
 
-Não deixe:
+Animações podem ser utilizadas quando melhorarem a experiência.
 
-- imports órfãos
-- componentes não utilizados
-- variáveis não utilizadas
-- código morto
-- arquivos temporários desnecessários
-- comentários de debugging
+Devem ser discretas, profissionais, consistentes e leves.
 
-Reutilize componentes quando isso melhorar manutenção e consistência.
+Evitar animações gratuitas ou excessivas.
 
-Evite abstrações desnecessárias para páginas simples.
+O site deve continuar profissional sem depender delas.
 
 ---
 
-## 22. JSX
+## 30. Configurações em `data`
 
-Textos JSX devem respeitar as regras de lint.
+Os arquivos existentes em `data` podem ser utilizados como fonte central de informações.
 
-Quando necessário, escapar caracteres utilizando entidades adequadas, como:
+Atualize quando necessário:
 
-`&apos;`
+- `data/site.config.ts`
+- `data/content.ts`
+- `data/brand.ts`
 
-ou:
+Não fique limitado aos textos genéricos existentes nesses arquivos.
 
-`&quot;`
-
-Não desative regras globalmente apenas para contornar um problema pontual.
-
----
-
-## 23. Dependências e configuração
-
-Priorize builds simples e estáveis.
-
-Não altere configurações estruturais sem necessidade.
-
-Não criar regras de PostCSS que exijam dependências adicionais sem justificativa.
-
-Antes de instalar um novo pacote, verifique se o problema pode ser resolvido com a stack já existente.
+Eles são pontos de partida e devem ser adaptados ao cliente.
 
 ---
 
-## 24. Qualidade de conteúdo
+## 31. Build e estabilidade
 
-A copy deve ser específica para a empresa.
+Priorizar builds estáveis e simples.
 
-Evite textos genéricos como:
+Não criar configurações desnecessariamente complexas.
 
-- "somos referência"
-- "qualidade e excelência"
-- "soluções inovadoras"
-- "transformando sonhos em realidade"
+Manter configuração padrão do PostCSS sempre que possível.
 
-a menos que exista contexto que justifique a mensagem.
-
-Priorize:
-
-- clareza
-- benefício
-- especificidade
-- diferenciais reais
-- linguagem compatível com o público
-
-Não exagere promessas.
+Não criar regras que exijam instalação manual de dependências adicionais sem necessidade.
 
 ---
 
-## 25. Animações
+## 32. Imports
 
-Animações devem melhorar percepção e experiência, não servir apenas como decoração.
+Não deixar imports órfãos.
 
-Prefira movimentos discretos.
+Toda variável, função, componente, ícone ou dependência importada deve ser utilizada.
 
-Respeite `prefers-reduced-motion` quando aplicável.
-
-Não prejudique:
-
-- leitura
-- performance
-- acessibilidade
-- interação
+Remover imports não utilizados antes de finalizar.
 
 ---
 
-## 26. Antes de considerar o site concluído
+## 33. JSX
 
-Revise o projeto inteiro.
+Garantir JSX válido.
 
-Confirme:
+Quando necessário, escapar caracteres especiais utilizando `&apos;` ou `&quot;`.
 
-- conteúdo real aplicado
-- contatos corretos
-- links funcionando
-- assets funcionando
-- ausência de placeholders
-- ausência de informações fictícias
-- favicon correto
-- metadata coerente
+Evitar erros de lint e compilação.
+
+---
+
+## 34. Validação obrigatória antes de finalizar
+
+Antes de considerar o site concluído, revisar:
+
+- Header criado
+- menu desktop funcional
+- links ancorados funcionando
+- menu mobile funcional
+- Hero completo
+- Sobre
+- Serviços
+- Diferenciais
+- Processo
+- Prova social
+- Localização
+- FAQ com aproximadamente 4 a 5 perguntas
+- CTA final
+- Footer completo
+- crédito Z-Agent com link correto para `https://sites.z-agent.com.br`
+- WhatsApp nos CTAs
+- botão flutuante de WhatsApp
+- favicon
+- metadata
+- Open Graph
+- Twitter
 - responsividade
-- ausência de overflow horizontal
-- menu mobile funcionando
-- CTAs funcionando
-- console sem erros relevantes
+- acessibilidade básica
+- ausência de imports órfãos
+- ausência de assets quebrados
 
-Depois execute:
+Executar obrigatoriamente `npm run build`.
 
-```bash
-npm run build
-```
+Corrigir todos os erros encontrados.
 
-Corrija todos os erros de build antes de considerar o trabalho concluído.
-
-Não finalize a tarefa apenas porque a página parece correta no navegador.
+O trabalho só deve ser considerado concluído quando o build terminar com sucesso.
 
 ---
 
-## 27. Princípio final
+## 35. Regra final
 
-O objetivo não é preencher um template.
+Não entregue apenas uma página que "funciona".
 
-O objetivo é utilizar a infraestrutura do starter para produzir um site que pareça criado especificamente para aquela empresa.
+Entregue um site que esteja visualmente pronto para apresentação ao cliente.
 
-Preserve a estabilidade técnica do projeto, mas adapte design, conteúdo e estrutura à identidade e às necessidades reais de cada cliente.
+Antes de finalizar, verifique:
+
+- Parece feito especificamente para esta empresa?
+- A primeira dobra comunica claramente o negócio?
+- O visitante sabe o que fazer?
+- O mobile está realmente bom?
+- Todas as seções importantes existem?
+- O WhatsApp está fácil de encontrar?
+- O site possui acabamento profissional?
+- Existem placeholders ou informações que precisam de validação humana?
+
+Se a resposta indicar que o site ainda parece incompleto, continue refinando antes de finalizar.
