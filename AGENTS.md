@@ -14,12 +14,29 @@ O resultado deve parecer desenvolvido especificamente para a empresa, e não ape
 
 Antes de desenvolver qualquer página:
 
-1. Leia este arquivo `AGENTS.md`.
-2. Analise `public/docs/briefing.md`.
-3. Analise todos os materiais existentes em `public/brand`.
-4. Analise todas as imagens existentes em `public/images`.
-5. Analise os demais arquivos relevantes existentes em `public`.
-6. Consulte os arquivos de configuração existentes em `data`.
+1. Leia integralmente este arquivo `AGENTS.md`.
+2. Leia `public/docs/briefing.md`.
+3. Leia `public/docs/estilos-visuais.md`.
+4. Identifique no briefing qual direção visual foi escolhida para o projeto.
+5. Analise todos os materiais existentes em `public/brand`.
+6. Analise todas as imagens existentes em `public/images`.
+7. Analise os demais arquivos relevantes existentes em `public`.
+8. Consulte os arquivos de configuração existentes em `data`.
+9. Antes de implementar, defina mentalmente a direção visual do projeto combinando briefing, identidade da marca, materiais fornecidos e estilo visual escolhido.
+
+### Direção visual obrigatória
+
+A direção visual definida em `public/docs/briefing.md` deve orientar efetivamente o design do site.
+
+Consulte as características correspondentes em `public/docs/estilos-visuais.md`.
+
+Não trate a direção visual apenas como escolha de cores ou fontes. Ela deve influenciar de forma perceptível a composição, Hero, grid, tipografia, cards, imagens, espaçamento, formas, hierarquia e ritmo visual.
+
+Se o briefing contiver referências visuais externas, utilize-as em conjunto com a direção escolhida, sem copiar literalmente outros sites.
+
+Se nenhuma direção visual tiver sido escolhida, selecione a opção do catálogo mais coerente com o segmento, identidade, público e posicionamento do cliente antes de iniciar a implementação.
+
+Sites de clientes diferentes não devem parecer simples variações do mesmo template.
 
 Os materiais fornecidos pelo cliente são a principal fonte de verdade sobre empresa, serviços, público, posicionamento, identidade visual, contatos, localização, diferenciais e tom de comunicação.
 
