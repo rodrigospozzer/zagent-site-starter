@@ -211,27 +211,58 @@ O processo deve ser adaptado ao tipo de negócio.
 
 ## 15. Prova social
 
-Criar seção de prova social/depoimentos.
+Criar sempre uma seção de prova social/depoimentos.
 
-Quando existirem depoimentos fornecidos, utilizá-los sem alterar o sentido.
+Quando existirem depoimentos reais fornecidos pelo cliente, utilizá-los sem alterar o sentido.
 
-Quando não houver depoimentos, manter a estrutura utilizando placeholders claramente identificáveis para posterior substituição.
+Quando não houver depoimentos suficientes, manter a estrutura visual completa utilizando placeholders claramente identificáveis para posterior substituição.
 
-Não inventar avaliações verificadas, notas de plataformas ou números de clientes.
+Por padrão, criar 3 cards de depoimentos para que a seção tenha composição visual completa e equilibrada.
+
+Se houver apenas 1 ou 2 depoimentos reais, utilizar os depoimentos disponíveis e completar os demais cards com placeholders claramente identificados.
+
+Os placeholders devem parecer conteúdo provisório e nunca devem ser apresentados como avaliações reais ou verificadas.
+
+Não inventar notas de plataformas, quantidade de avaliações, número de clientes ou qualquer outro dado factual não fornecido pelo cliente.
+
+A seção deve permanecer visualmente equilibrada tanto no desktop quanto no mobile.
 
 ---
 
 ## 16. Localização
 
-Criar seção de localização.
+Criar sempre uma seção de localização ou área de atendimento.
 
-Quando houver endereço real, utilizá-lo.
+### Quando houver endereço completo
 
-Quando houver informação suficiente, utilizar mapa incorporado quando adequado.
+Se o cliente fornecer um endereço real e suficientemente completo:
 
-Não inventar endereço.
+- exibir o endereço informado
+- incorporar um mapa funcional quando isso fizer sentido para o negócio
+- utilizar a localização real fornecida pelo cliente
+- nunca alterar, completar ou presumir partes do endereço
 
-Caso o endereço ainda não tenha sido fornecido, manter a estrutura com placeholder evidente para revisão.
+O mapa deve funcionar de verdade. Não utilizar imagem falsa, bloco vazio ou placeholder simulando um mapa quando houver dados suficientes para incorporar um mapa real.
+
+### Quando houver apenas cidade, região ou área de atendimento
+
+Se o cliente informar apenas cidade, estado, bairros, região ou cidades atendidas:
+
+- criar uma seção visualmente completa de área de atendimento
+- utilizar somente as informações realmente fornecidas
+- não inventar rua, número, bairro ou endereço
+- não incorporar um mapa que dependa de uma localização específica inexistente
+- não criar placeholder visual de mapa como `[MAPA]`, `[IMAGEM DA SEDE]` ou equivalente
+
+Nesse caso, substituir o mapa por uma composição visual coerente com o restante do site, podendo utilizar texto, ícone de localização, área atendida e CTA de contato.
+
+Exemplo: se o briefing informar apenas `Porto Alegre - RS`, comunicar atendimento em Porto Alegre sem inventar um endereço específico.
+
+### Quando nenhuma localização for fornecida
+
+Manter a seção, mas utilizar conteúdo provisório claramente identificável para posterior validação.
+
+Nunca apresentar uma localização inventada como informação real do cliente.
 
 ---
 
