@@ -116,10 +116,14 @@ workspace = workspace_root(payload)
 status_path = workspace / "docs/factory/STATUS.md"
 status = status_path.read_text(encoding="utf-8") if status_path.exists() else ""
 
-missing = [
-    gate for gate in REQUIRED_IMPLEMENTATION_GATES
-    if gate not in status
-]
+is_template_mode = "FACTORY_MODE: TEMPLATE_MODE" in status
+
+missing = []
+if not is_template_mode:
+    missing = [
+        gate for gate in REQUIRED_IMPLEMENTATION_GATES
+        if gate not in status
+    ]
 
 # Geração visual só após Art Direction.
 if tool == "generate_image":

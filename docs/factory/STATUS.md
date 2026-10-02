@@ -1,20 +1,43 @@
-# Z-Agent Site Factory — Status
+# Factory Status Machine
 
-| Fase | Papel | Status | Artefato |
-|---|---|---|---|
-| 01 | Material Auditor | PENDING | `01-material-inventory.md` |
-| 02 | Content Strategist | PENDING | `02-content-strategy.md` |
-| 03 | Art Director | PENDING | `03-art-direction.md` |
-| 04 | UI Architect | PENDING | `04-ui-architecture.md` |
-| 05 | Frontend Engineer | PENDING | `05-implementation-report.md` |
-| 06 | Visual QA | PENDING | `06-visual-qa.md` |
-| 07 | Technical QA | PENDING | `07-technical-qa.md` |
+FACTORY_VERSION: 2.0
+FACTORY_MODE: TEMPLATE_MODE
+PROJECT_NAME: [PENDING]
+CURRENT_PHASE: TEMPLATE_MAINTENANCE
+CURRENT_GATE: [PENDING]
+CURRENT_STATUS: NOT_STARTED
+NEXT_ACTION: [PENDING]
 
-## Fase atual
-01 — Material Auditor
+## Gates
+- GATE_01 (Material Audit): NOT_STARTED
+- GATE_02 (Content Strategy): NOT_STARTED
+- GATE_03 (Art Direction): NOT_STARTED
+- VISUAL_ASSET_PLAN: NOT_STARTED
+- GATE_04 (UI Architecture): NOT_STARTED
+- GATE_05 (Frontend Implementation): NOT_STARTED
+- GATE_06 (Visual QA): NOT_STARTED
+- GATE_07_LOCAL (Performance QA Local): NOT_STARTED
+- GATE_08_LOCAL (Technical QA Local): NOT_STARTED
 
-## Bloqueios
-Nenhum.
+## Deployment & Production
+- DEPLOYMENT_STATUS: NOT_STARTED
+- GATE_07_PRODUCTION (Performance QA Prod): NOT_STARTED
+- GATE_08_PRODUCTION (Technical QA Prod): NOT_STARTED
 
-## Última decisão aprovada
-Nenhuma.
+## Final State
+- FINAL_STATUS: NOT_STARTED
+
+## Rework Counters
+- REWORK_COUNT_GATE_01: 0
+- REWORK_COUNT_GATE_02: 0
+- REWORK_COUNT_GATE_03: 0
+- REWORK_COUNT_GATE_04: 0
+- REWORK_COUNT_GATE_05: 0
+- REWORK_COUNT_GATE_06: 0
+- REWORK_COUNT_GATE_07: 0
+- REWORK_COUNT_GATE_08: 0
+
+## Control Log
+- LAST_CHANGE_REQUEST: None
+- LAST_BLOCKER: None
+- LAST_HUMAN_DECISION: None

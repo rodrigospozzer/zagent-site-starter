@@ -39,7 +39,7 @@ zagent-site-starter/
         ├── 04-ui-architecture.md
         ├── 05-implementation-report.md
         ├── 06-visual-qa.md
-        └── 07-technical-qa.md
+        └── 08-technical-qa.md
 ```
 
 ## Remover configuração anterior
